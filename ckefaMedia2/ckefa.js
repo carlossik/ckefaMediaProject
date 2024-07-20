@@ -23,9 +23,9 @@ function emailSend() {
     '<br/> Special Requests: ' + special;
 
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "sakanb@yahoo.com",
-        Password : "ADD6C7A568415A9727525D65126C899FE56B",
+        Host : SERVICE_HOST,
+        Username : SERVICE_USERNAME,
+        Password : SERVICE_PASSWORD,
         To : 'carlossik@gmail.com',
         From : "sakanb@yahoo.com",
         Subject : "Test subject",
