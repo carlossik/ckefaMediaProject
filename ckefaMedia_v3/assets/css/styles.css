@@ -44,7 +44,7 @@ section {
     padding: 100px 80px;
 }
 
-section:not(.hero):nth-child(even) {
+section:not(.hero):nth-child(odd) {
     background-color: #43913d;
 }
 
@@ -255,6 +255,7 @@ header nav li {
 /* Packages Section */
 
 .packages .why-us li {
+    font-size: 20px !important;
     letter-spacing: 1px;
     line-height: 30px;
 }
