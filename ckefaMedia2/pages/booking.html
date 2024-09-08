@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking and Enquiry Form - CKEFA Media</title>
+    <link rel="stylesheet" href="styles/ckefa.css">
+    <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('./media/astro-goalpost.jpg') no-repeat center center fixed;
+            background: url('./media/football-field-desktop.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
         }
@@ -87,16 +89,16 @@
 
 <div class="navbar">
     <a href="index.html">Home</a>
-    <a href="index.html">About Us</a>
-    <a href="booking.html">Book Services</a>
-    <a href="contactusPage.html">Contact Us</a>
+    <a href="../pages/aboutus.html">About Us</a>
+    <a href="../pages/booking.html">Book Services</a>
+    <a href="../pages/contactusPage.html">Contact Us</a>
 </div>
 
 <div class="container">
     <h2>Booking and Enquiry Form</h2>
     <p>Use the form below to book our services or send us an enquiry. We will get back to you promptly.</p>
 
-    <form action="/send_email" method="post" enctype="text/plain">
+    <form class="gform" action="https://script.google.com/macros/s/AKfycbxgXP2ewE4peOYEj-NF7JjQxYMQnQIqbi3snvemSM6MMEMcTq2P1lznMUmiD4LOm-X5/exec" method="post" data-email=TO_ADDRESS >
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -109,7 +111,7 @@
         <label for="service">Type of Service:</label>
         <select id="service" name="service" required>
             <option value="" disabled selected>Select a service</option>
-            <option value="Video-recording">Match Recording</option>
+            <option value="match-recording">Match Recording</option>
             <option value="live-streaming">Live Streaming</option>
             <option value="game-analysis">Game Analysis</option>
             <option value="highlights">Highlights</option>
@@ -134,12 +136,30 @@
         <label for="special-requests">Special Requirements/Requests:</label>
         <textarea id="special-requests" name="special-requests" rows="4"></textarea>
 
+        <div style="display:none" class="thankyou_message">
+            <!-- You can customize the thankyou message by editing the code below -->
+            <h2><em>Thank you</em> for contacting CKEFA Media! We will get back to you soon!
+            </h2>
+        </div>
+
         <input type="submit" value="Submit">
     </form>
 </div>
 
+<footer>
+    <p>&reg; CKEFA Media</p>
+    <p>Why are you even reading this?! There is never anything interesting in the footer!</p>
+    <ul>
+        <li><a href="#"><i class="fa-brands fa-youtube fa-2xl" style="color:#FFFAFA"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-x-twitter fa-2xl" style="color:#FFFAFA"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook fa-2xl" style="color:#FFFAFA"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram fa-2xl" style="color:#FFFAFA"></i></a></li>
+    </ul>
+</footer>
+
+
+    <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
     <script type="text/javascript" src="ckefa.js"></script>
-
 </body>
 </html>
