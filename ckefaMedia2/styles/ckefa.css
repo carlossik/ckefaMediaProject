@@ -1,5 +1,31 @@
-/* Homepage hero */
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFAFA;
+}
 
+/* Navigation bar  */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+}
+.navbar a {
+    color: #90ee90;
+    text-decoration: none;
+    padding: 14px 15px;
+    display: inline-block;
+}
+.navbar a:hover {
+    /* background-color: #77cc77; */
+    text-decoration: none;
+    border-bottom: 2px solid #FFFAFA; /* Border under navbar */
+}
+
+/* Homepage hero */
 .hero {
     position: relative;
     justify-content: center;
@@ -83,9 +109,7 @@
     }
 }
 
-
 /* Footer Section  */
-
 footer {
     position: absolute;
     bottom: 0;
