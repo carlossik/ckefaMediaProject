@@ -9,7 +9,7 @@
     text-shadow: #074407 1.2px 1.5px;
 }
 
-.hero .background-image {
+.hero {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,27 +17,48 @@
     height: 100%;
     background-size: cover;
     z-index: -1;
-    background-color: #90ee90;
+    /* background-color: #90ee90; */
+}
+
+.hero img {
+    margin-top: 120px;
+    height: 500px;
+    width: 500px;
 }
 
 .hero h1 {
     font: bold 60px "Open Sans", sans-serif;
+    margin-top: 0;
     margin-bottom: 15px;
+    text-shadow: 5px 5px 5px rgba(17, 16, 16, 0.8);
 }
 
 .hero h3 {
     font: normal 28px "Open Sans", sans-serif;
     margin-bottom: 40px;
+    text-shadow: 5px 5px 5px rgba(17, 16, 16, 0.8);
 }
 
 .hero a.btn {
+    background-color: #1e7b1e; /* Light green color */
+    text-decoration: none;
+    color: #FFFAFA;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
     padding: 20px 46px;
+}
+
+.hero a.btn:hover {
+    background-color: #77cc77; /* Darker shade of light green */
 }
 
 .hero-content-area {
     opacity: 0;
-    margin-top: 100px;
-    animation: 1.5s slidefade 1.4s forwards;
+    margin-top: 70px;
+    animation: 1.8s slidefade 1.7s forwards;
+    -webkit-animation: 1.8s slidefade 1.7s forwards;
 }
 
 @keyframes slidefade {
@@ -63,12 +84,13 @@
 }
 
 
-
-
-
 /* Footer Section  */
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 4vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
