@@ -7,18 +7,11 @@
     <link rel="stylesheet" href="styles/ckefa.css">
     <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
     <style>
-        body {
-            background: url('./media/football-field-desktop.jpg') no-repeat center center fixed;
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: url('./media/astro-football-field-desktop.jpg') no-repeat center center fixed;
             background-size: cover;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Lighter background */
-            border-radius: 10px;
-            box-sizing: border-box;
         }
 
         @media (max-width: 600px) {
@@ -34,19 +27,24 @@
 </head>
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="pages/aboutus.html">About Us</a>
-    <a href="pages/booking.html">Book Services</a>
-    <a href="pages/contactusPage.html">Contact Us</a>
-</div>
+<section class="navbar">
+    <img class="nav-logo" src="./media/ckefa-logo.png" alt="brandlogo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="./pages/aboutus.html">About Us</a>
+        <a href="./pages/booking.html">Book Services</a>
+        <a href="./pages/contactusPage.html">Contact Us</a>
+    </nav>
+</section>
+
 
 <section class="hero">
+    <!-- <div class="background-image" style="background-image: url('./media/football-field-desktop.jpg')"></div> -->
     <div class="hero-content-area">
-        <img src="media/ckefa-logo.png" alt="brandlogo">
+        <img class="hero-logo" src="./media/ckefa-logo.png" alt="brandlogo">
         <h1>CKEFA Media</h1>
         <h3>Watch your team play matches, <span class="hero-live"><strong>live</strong></span>  with us</h3>
-        <a href="pages/booking.html" class="btn">Book Now</a>
+        <a href="./pages/booking.html" class="btn">Book Now</a>
     </div>
 </section>
 
