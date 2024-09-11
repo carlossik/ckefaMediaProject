@@ -6,6 +6,10 @@ body {
     color: #FFFAFA;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* Navigation bar  */
 .navbar {
     background-color: rgba(0, 0, 0, 0.6);
@@ -20,9 +24,8 @@ body {
     display: inline-block;
 }
 .navbar a:hover {
-    /* background-color: #77cc77; */
     text-decoration: none;
-    border-bottom: 2px solid #FFFAFA; /* Border under navbar */
+    border-bottom: 2px solid #90ee90; /* Border under navbar */
 }
 
 /* Homepage hero */
@@ -111,17 +114,17 @@ body {
 
 /* Footer Section  */
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 4vh;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* background-color: #1e7b1e; */
     background-color: rgba(0, 0, 0, 0.6);
     color: #FFFAFA;
     padding: 20px 0;
+    margin-top: 120px;
 }
 
 footer ul {
