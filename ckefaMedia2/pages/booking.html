@@ -10,9 +10,10 @@
         body {
             background: url('../media/astro-goalpost.jpg') no-repeat center center fixed;
             background-size: cover;
+            /* background-attachment: scroll; */
         }
 
-        .container {
+        .container-booking {
             max-width: 600px;
             margin: 40px auto;
             padding: 20px;
@@ -73,63 +74,65 @@
     <img class="nav-logo" src="../media/ckefa-logo.png" alt="brandlogo">
     <nav>
         <a href="../index.html">Home</a>
-        <a href="./pages/aboutus.html">About Us</a>
-        <a href="./pages/booking.html">Book Services</a>
-        <a href="./pages/contactusPage.html">Contact Us</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="./booking.html">Book Services</a>
+        <a href="./contactusPage.html">Contact Us</a> 
     </nav>
-</section> 
+</section>
 
-<div class="container">
-    <h2>Booking and Enquiry Form</h2>
-    <p>Use the form below to book our services or send us an enquiry. We will get back to you promptly.</p>
+<section class="main">
+    <div class="container-booking">
+        <h2>Booking and Enquiry Form</h2>
+        <p>Use the form below to book our services or send us an enquiry. We will get back to you promptly.</p>
 
-    <form class="gform" action="https://script.google.com/macros/s/AKfycbxgXP2ewE4peOYEj-NF7JjQxYMQnQIqbi3snvemSM6MMEMcTq2P1lznMUmiD4LOm-X5/exec" method="post" data-email=TO_ADDRESS >
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <form class="gform" action="https://script.google.com/macros/s/AKfycbxgXP2ewE4peOYEj-NF7JjQxYMQnQIqbi3snvemSM6MMEMcTq2P1lznMUmiD4LOm-X5/exec" method="post" data-email=TO_ADDRESS >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
 
-        <label for="service">Type of Service:</label>
-        <select id="service" name="service" required>
-            <option value="" disabled selected>Select a service</option>
-            <option value="match-recording">Match Recording</option>
-            <option value="live-streaming">Live Streaming</option>
-            <option value="game-analysis">Game Analysis</option>
-            <option value="highlights">Highlights</option>
-            <option value="in-game-photography">In-Game Photography</option>
-        </select>
+            <label for="service">Type of Service:</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="match-recording">Match Recording</option>
+                <option value="live-streaming">Live Streaming</option>
+                <option value="game-analysis">Game Analysis</option>
+                <option value="highlights">Highlights</option>
+                <option value="in-game-photography">In-Game Photography</option>
+            </select>
 
-        <label for="event-date">Event Date:</label>
-        <input type="date" id="event-date" name="event-date" required>
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event-date" required>
 
-        <label for="event-time">Event Time:</label>
-        <input type="time" id="event-time" name="event-time" required>
+            <label for="event-time">Event Time:</label>
+            <input type="time" id="event-time" name="event-time" required>
 
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" required>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
 
-        <label for="team-name">Team/Organization Name:</label>
-        <input type="text" id="team-name" name="team-name">
+            <label for="team-name">Team/Organization Name:</label>
+            <input type="text" id="team-name" name="team-name">
 
-        <label for="event-description">Event Description:</label>
-        <textarea id="event-description" name="event-description" rows="4"></textarea>
+            <label for="event-description">Event Description:</label>
+            <textarea id="event-description" name="event-description" rows="4"></textarea>
 
-        <label for="special-requests">Special Requirements/Requests:</label>
-        <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+            <label for="special-requests">Special Requirements/Requests:</label>
+            <textarea id="special-requests" name="special-requests" rows="4"></textarea>
 
-        <div style="display:none" class="thankyou_message">
-            <!-- You can customize the thankyou message by editing the code below -->
-            <h2><em>Thank you</em> for contacting CKEFA Media! We will get back to you soon!
-            </h2>
-        </div>
+            <div style="display:none" class="thankyou_message">
+                <!-- You can customize the thankyou message by editing the code below -->
+                <h2><em>Thank you</em> for contacting CKEFA Media! We will get back to you soon!
+                </h2>
+            </div>
 
-        <input type="submit" value="Submit">
-    </form>
-</div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
 
 <footer>
     <p>&copy; CKEFA Media</p>
