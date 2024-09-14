@@ -1,36 +1,3 @@
-function emailSend() {
+const year = document.querySelector('#current-year');
 
-    var fullName = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var phoneNumber = document.getElementById("phone").value;
-    var service = document.getElementById("service").value;
-    var eventDate = document.getElementById("event-date").value;
-    var eventTime = document.getElementById("event-time").value;
-    var location = document.getElementById("location").value;
-    var teamName = document.getElementById("team-name").value;
-    var eventDesc = document.getElementById("event-description").value;
-    var special = document.getElementById("special-requests").value;
-
-    var messageBody = 'Name: ' + fullName +
-    '<br/> email: ' + email +
-    '<br/> Phone: ' + phoneNumber +
-    '<br/> Service: ' + service +
-    '<br/> Event Date: ' + eventDate +
-    '<br/> Event Time: ' + eventTime +
-    '<br/> Location: ' + location +
-    '<br/> Team Name: ' + teamName +
-    '<br/> Event Description: ' + eventDesc +
-    '<br/> Special Requests: ' + special;
-
-    Email.send({
-        Host : SERVICE_HOST,
-        Username : SERVICE_USERNAME,
-        Password : SERVICE_PASSWORD,
-        To : 'carlossik@gmail.com',
-        From : "sakanb@yahoo.com",
-        Subject : "Test subject",
-        Body : messageBody,
-    }).then(
-      message => alert(message)
-    );
-}
+year.innerHTML = new Date().getFullYear();
