@@ -161,8 +161,8 @@ footer ul {
 }
 
 footer ul li {
-    margin-left: 22px;
-    padding-right: 15px;
+    /* margin-left: 22px; */
+    padding: 0 20px;
 }
 
 footer ul li:not(:last-child) {
