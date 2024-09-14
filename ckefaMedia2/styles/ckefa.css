@@ -1,4 +1,4 @@
-/* General styles */
+/* General Styles */
 * {
     box-sizing: border-box;
 }
@@ -37,25 +37,28 @@ html, body {
     padding: 5px 0;
     z-index: 9;
 }
-.navbar a {
+.navbar nav a {
     color: #90ee90;
     text-decoration: none;
     padding: 14px 15px 7px;
     display: inline-block;
     position: center;
 }
-.navbar a:hover {
+.navbar nav a:hover {
     text-decoration: none;
     border-bottom: 2px solid #90ee90; /* Border under navbar */
 }
-
-.nav-logo {
+a .nav-logo {
     margin-right: 80px;
     height: 50px;
     width: 50px;
+    align-self: center;
+}
+a .nav-logo:hover {
+    cursor: pointer;
 }
 
-/* Homepage */
+/* Hero Styles */
 .hero {
     position: relative;
     justify-content: center;
@@ -130,14 +133,14 @@ html, body {
     }
 }
 
-/* About Us */
+/* About Us Styles*/
 
-/* Booking */
+/* Booking Styles*/
 
-/* Contact Us */
+/* Contact Us Styles*/
 
 
-/* Footer Section  */
+/* Footer Styles  */
 footer {
     position: fixed;
     bottom: 0;
@@ -153,16 +156,21 @@ footer {
 
 footer ul {
     display: flex;
+    /* justify-items: flex-end; */
     align-items: center;
     list-style-type: none;
 }
 
 footer ul li {
     margin-left: 22px;
+    padding-right: 15px;
+}
+
+footer ul li:not(:last-child) {
+    border-right: solid 2px #FFFAFA;
 }
 
 footer p {
-    /* text-transform: uppercase; */
     font-size: 16px;
     align-self: center;
 }
