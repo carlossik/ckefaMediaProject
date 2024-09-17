@@ -28,7 +28,7 @@ html, body {
     justify-content: center;
     font-size: 1.1rem;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.6);
+    box-shadow: 5px 5px 5px rgba(85, 85, 85, 0.6);
     overflow: hidden;
     text-align: center;
     padding: 5px 0;
