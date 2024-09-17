@@ -2,18 +2,15 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0 0 90px;
     color: #FFFAFA;
 }
-
 html, body {
     height: 120%;
 }
-
 .main {
     height: 100%;
     width: 100vw;
@@ -43,10 +40,14 @@ html, body {
     padding: 14px 15px 7px;
     display: inline-block;
     position: center;
+    transition: all 0.3s;
 }
 .navbar nav a:hover {
     text-decoration: none;
     border-bottom: 2px solid #90ee90; /* Border under navbar */
+}
+.nav-link.active {
+    border-bottom: 2px solid #90ee90; /* Persistent border under active navbar item */
 }
 a .nav-logo {
     margin-right: 80px;
@@ -68,26 +69,22 @@ a .nav-logo:hover {
     text-shadow: #074407 1.2px 1.5px;
     padding-bottom: 50px;
 }
-
 .hero .hero-logo {
     margin-top: 150px;
     height: 500px;
     width: 500px;
 }
-
 .hero h1 {
     font: bold 60px "Open Sans", sans-serif;
     margin-top: 0;
     margin-bottom: 15px;
     text-shadow: 5px 5px 5px rgba(17, 16, 16, 0.8);
 }
-
 .hero h3 {
     font: normal 28px "Open Sans", sans-serif;
     margin-bottom: 40px;
     text-shadow: 5px 5px 5px rgba(17, 16, 16, 0.8);
 }
-
 .hero a.btn {
     background-color: #1e7b1e; /* Light green color */
     text-decoration: none;
@@ -98,12 +95,10 @@ a .nav-logo:hover {
     font-size: 18px;
     padding: 20px 46px;
 }
-
 .hero a.btn:hover {
     background-color: #77cc77; /* Darker shade of light green */
     cursor: pointer;
 }
-
 .hero-content-area {
     opacity: 0;
     margin-top: 70px;
@@ -153,27 +148,22 @@ footer {
     color: #FFFAFA;
     padding: 0 6rem;
 }
-
 footer ul {
     display: flex;
     align-items: center;
     list-style-type: none;
 }
-
 footer ul li {
     /* margin-left: 22px; */
     padding: 0 20px;
 }
-
 footer ul li:not(:last-child) {
     border-inline-end: solid 2px #FFFAFA;
 }
-
 footer p {
     font-size: 16px;
     align-self: center;
 }
-
 footer p #copyright-copy {
     text-transform: uppercase;
     font-size: 18px;

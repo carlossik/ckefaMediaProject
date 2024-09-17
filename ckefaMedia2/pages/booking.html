@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking and Enquiry Form - CKEFA Media</title>
     <link rel="stylesheet" href="../styles/ckefa.css">
-    <script type="text/javascript" src="../ckefa.js"></script>
+    <!-- <script type="text/javascript" src="../ckefa.js"></script> -->
     <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
     <style>
         body {
@@ -69,17 +69,18 @@
         }
     </style>
 </head>
-<body>
+<body id="booking">
 
 <section class="navbar">
     <a href="../index.html">
         <img class="nav-logo" src="../media/ckefa-logo.png" alt="brandlogo">
     </a>
     <nav>
-        <a href="../index.html">Home</a>
-        <a href="./aboutus.html">About Us</a>
-        <a href="./booking.html">Book Services</a>
-        <a href="./contactusPage.html">Contact Us</a> 
+        <a href="../index.html" class="nav-link" data-active="home">Home</a>
+        <a href="./aboutus.html" class="nav-link" data-active="aboutus">About Us</a>
+        <a href="./booking.html" class="nav-link active" data-active="booking">Book Services</a>
+        <a href="./contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a>
+        <a href="./media.html" class="nav-link" data-active="contactus">Media</a>
     </nav>
 </section>
 
@@ -146,7 +147,7 @@
         <li><a href="#"><i class="fa-brands fa-instagram fa-xl" style="color:#FFFAFA"></i></a></li>
     </ul>
 </footer>
-
-    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+    <script type="text/javascript" src="../ckefa.js" crossorigin="anonymous"></script>
+    <script data-cfasync="false" type="text/javascript" src="../form-submission-handler.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking and Enquiry Form - CKEFA Media</title>
-    <script type="text/javascript" src="./ckefa.js"></script>
+    <title>Home - CKEFA Media</title>
+    <!-- <script type="text/javascript" src="./ckefa.js"></script> -->
     <link rel="stylesheet" href="styles/ckefa.css">
     <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
     <style>
@@ -25,17 +25,18 @@
         } */
     </style>
 </head>
-<body>
+<body id="home">
 
 <section class="navbar">
     <a href="./index.html">
         <img class="nav-logo" src="./media/ckefa-logo.png" alt="brandlogo">
     </a>
     <nav>
-        <a href="./index.html">Home</a>
-        <a href="./pages/aboutus.html">About Us</a>
-        <a href="./pages/booking.html">Book Services</a>
-        <a href="./pages/contactusPage.html">Contact Us</a>
+        <a href="./index.html" class="nav-link active" data-active="home">Home</a>
+        <a href="./pages/aboutus.html" class="nav-link" data-active="aboutus">About Us</a>
+        <a href="./pages/booking.html" class="nav-link" data-active="booking">Book Services</a>
+        <a href="./pages/contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a>
+        <a href="./pages/media.html" class="nav-link" data-active="contactus">Media</a>
     </nav>
 </section>
 
@@ -57,7 +58,7 @@
         <li><a href="#"><i class="fa-brands fa-instagram fa-xl" style="color:#FFFAFA"></i></a></li>
     </ul>
 </footer>
-
+    <script type="text/javascript" src="./ckefa.js"></script>
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 </body>
 </html>
