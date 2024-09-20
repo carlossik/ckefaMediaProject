@@ -61,29 +61,31 @@ a .nav-logo:hover {
 
 /* Hero Styles */
 .hero {
+    margin: 0 auto;
     position: relative;
     justify-content: center;
     text-align: center;
     min-height: 100vh;
+    max-width: 50vw;
     color: #FFFAFA;
     text-shadow: #074407 1.2px 1.5px;
     padding-bottom: 50px;
 }
 .hero .hero-logo {
-    margin-top: 150px;
-    height: 500px;
-    width: 500px;
+    margin-top: 110px;
+    height: 300px;
+    width: 300px;
 }
 .hero h1 {
-    font: bold 60px "Open Sans", sans-serif;
+    font: bold 45px "Open Sans", sans-serif;
     margin-top: 0;
     margin-bottom: 15px;
-    text-shadow: 5px 5px 5px rgba(17, 16, 16, 0.8);
+    text-shadow: 3px 3px 3px rgba(17, 16, 16, 0.8);
 }
 .hero h3 {
-    font: normal 28px "Open Sans", sans-serif;
+    font: normal 24px "Open Sans", sans-serif;
     margin-bottom: 40px;
-    text-shadow: 5px 5px 5px rgba(17, 16, 16, 0.8);
+    text-shadow: 2px 2px 2px rgba(17, 16, 16, 0.8);
 }
 .hero a.btn {
     background-color: #1e7b1e; /* Light green color */
@@ -104,6 +106,13 @@ a .nav-logo:hover {
     margin-top: 70px;
     animation: 1.8s slidefade 1.7s forwards;
     -webkit-animation: 1.8s slidefade 1.7s forwards;
+}
+.hero .intro {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #fff;
+    width: 60vw;
 }
 
 @keyframes slidefade {
