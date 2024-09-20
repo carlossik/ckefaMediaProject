@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking and Enquiry Form - CKEFA Media</title>
+    <link rel="stylesheet" href="../styles/ckefa.css">
+    <!-- <script type="text/javascript" src="../ckefa.js"></script> -->
+    <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url('../media/astro-goalpost.jpg') no-repeat center center fixed;
+            background-size: cover;
+            /* background-attachment: scroll; */
+        }
+
+        .container-booking {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Lighter background */
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        h2 {
+            color: #90ee90; /* Light green color */
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #90ee90; /* Light green color */
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: #000;
+        }
+        input[type="submit"] {
+            background-color: #90ee90; /* Light green color */
+            color: #000;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #77cc77; /* Darker shade of light green */
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                margin: 20px;
+            }
+            h2, p {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body id="booking">
+
+<section class="navbar">
+    <a href="../index.html">
+        <img class="nav-logo" src="../media/ckefa-logo.png" alt="brandlogo">
+    </a>
+    <nav>
+        <a href="../index.html" class="nav-link" data-active="home">Home</a>
+        <a href="./aboutus.html" class="nav-link" data-active="aboutus">About Us</a>
+        <a href="./booking.html" class="nav-link active" data-active="booking">Book Services</a>
+        <a href="./contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a>
+        <a href="./media.html" class="nav-link" data-active="contactus">Media</a>
+    </nav>
+</section>
+
+<section class="main">
+    <div class="container-booking">
+        <h2>Booking and Enquiry Form</h2>
+        <p>Use the form below to book our services or send us an enquiry. We will get back to you promptly.</p>
+
+        <form class="gform" action="https://script.google.com/macros/s/AKfycbxgXP2ewE4peOYEj-NF7JjQxYMQnQIqbi3snvemSM6MMEMcTq2P1lznMUmiD4LOm-X5/exec" method="post" data-email=TO_ADDRESS >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Type of Service:</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="match-recording">Match Recording</option>
+                <option value="live-streaming">Live Streaming</option>
+                <option value="game-analysis">Game Analysis</option>
+                <option value="highlights">Highlights</option>
+                <option value="in-game-photography">In-Game Photography</option>
+            </select>
+
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event-date" required>
+
+            <label for="event-time">Event Time:</label>
+            <input type="time" id="event-time" name="event-time" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="team-name">Team/Organization Name:</label>
+            <input type="text" id="team-name" name="team-name">
+
+            <label for="event-description">Event Description:</label>
+            <textarea id="event-description" name="event-description" rows="4"></textarea>
+
+            <label for="special-requests">Special Requirements/Requests:</label>
+            <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+            <div style="display:none" class="thankyou_message">
+                <!-- You can customize the thankyou message by editing the code below -->
+                <h2><em>Thank you</em> for contacting CKEFA Media! We will get back to you soon!
+                </h2>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright: <span id="copyright-copy">&copy; 2024 CKEFA Media, </span> All rights reserved.</p>
+    <ul>
+        <li><a href="#"><i class="fa-brands fa-youtube fa-xl" style="color:#FFFAFA"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-x-twitter fa-xl" style="color:#FFFAFA"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook fa-xl" style="color:#FFFAFA"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram fa-xl" style="color:#FFFAFA"></i></a></li>
+    </ul>
+</footer>
+    <script type="text/javascript" src="../ckefa.js" crossorigin="anonymous"></script>
+    <script data-cfasync="false" type="text/javascript" src="../form-submission-handler.js"></script>
+</body>
+</html>
