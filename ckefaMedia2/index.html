@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - CKEFA Media</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/favicon_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/favicon_icons/favicon-16x16.png">
+    <link rel="manifest" href="./media/favicon_icons/site.webmanifest">
     <!-- <script type="text/javascript" src="./ckefa.js"></script> -->
     <link rel="stylesheet" href="styles/ckefa.css">
     <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
@@ -13,23 +17,13 @@
             background-size: cover;
             /* background-attachment: scroll; */
         }
-
-        /* @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-                margin: 20px;
-            }
-            h2, p {
-                text-align: left;
-            }
-        } */
     </style>
 </head>
 <body id="home">
 
 <section class="navbar">
-    <a href="./index.html">
-        <img class="nav-logo" src="./media/ckefa-logo.png" alt="brandlogo">
+    <a class="nav-logo" href="./index.html">
+        <img id="nav-logo-image" src="./media/ckefa-logo.png" alt="brandlogo">
     </a>
     <nav>
         <a href="./index.html" class="nav-link active" data-active="home">Home</a>
@@ -38,8 +32,10 @@
         <a href="./pages/contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a>
         <a href="./pages/media.html" class="nav-link" data-active="contactus">Media</a>
     </nav>
+    <a class="nav-hamburger" href="/">
+        <i class="fa-solid fa-bars fa-xl" style="color: #99ee90;"></i>
+    </a>
 </section>
-
 <section class="hero">
     <div class="hero-content-area">
         <img class="hero-logo" src="./media/ckefa-logo.png" alt="brandlogo">
