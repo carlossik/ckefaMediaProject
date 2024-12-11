@@ -38,7 +38,12 @@ html, body {
     float: right;
     padding-right: 4rem;
 }
-.navbar nav a {
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.navbar nav ul li a {
     color: #90ee90;
     text-decoration: none;
     padding: 14px 15px 7px;
@@ -46,7 +51,7 @@ html, body {
     position: center;
     transition: all 0.3s;
 }
-.navbar nav a:hover {
+.navbar nav ul li a:hover {
     text-decoration: none;
     border-bottom: 2px solid #90ee90; /* Border under navbar */
 }
@@ -191,6 +196,9 @@ html, body {
     }
     .hero a.btn {
         padding: 15px 40px;
+    }
+    .hero-logo {
+        display: none;
     }
 }
 
