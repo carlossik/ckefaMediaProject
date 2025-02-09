@@ -14,18 +14,18 @@
         html, body {
             background: url('./media/astro-football-field-desktop.jpg') no-repeat center center fixed;
             background-size: cover;
-            /* background-attachment: scroll; */
         }
     </style>
 </head>
 <body id="home">
 
 <section class="navbar">
-    <div>
+    <div class="nav-logo-container">
         <a class="nav-logo" href="./index.html">
             <img id="nav-logo-image" src="./media/ckefa-logo.png" alt="brandlogo">
         </a>
     </div>
+
     <nav class="nav-link-list">
         <ul>
             <li><a href="./index.html" class="nav-link active" data-active="home">Home</a></li>
@@ -35,18 +35,15 @@
             <li><a href="./pages/media.html" class="nav-link" data-active="contactus">Media</a></li>
         </ul>
     </nav>
-    <div class="title-sm">
-        <p>CKEFA Media</p>
+
+    <div class="hamburger-sm">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
-    <div class="menu-sm">
-        <a class="nav-hamburger" href="#">
-            <i class="fa-solid fa-bars fa-2xl" style="color: #99ee90;"></i>
-        </a>
-        <a class="close-sm" href="#">
-            <i class="fa-solid fa-xmark fa-xl" style="color: #99ee90;"></i>
-        </a>
-    </div>
+
 </section>
+
 <section class="hero">
     <div class="hero-content-area">
         <img class="hero-logo" src="./media/ckefa-logo.png" alt="brandlogo">
@@ -67,7 +64,7 @@
     </ul>
 </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./ckefa.js"></script>
+    <script type="text/javascript" src="./ckefa.js" defer></script>
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 </body>
 </html>

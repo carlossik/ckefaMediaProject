@@ -1,156 +1,185 @@
-/* General Styles */
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Orbitron:wght@400..900&family=Permanent+Marker&display=swap');
+
+/* GENERAL STYLES */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Orbitron", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     color: #FFFAFA;
 }
+
 html, body {
-    height: 120%;
+    height: auto;
 }
+
 .main {
     height: 100%;
     width: 100vw;
     padding-bottom: 80px;
 }
 
-/* Navigation bar  */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION BAR */
 .navbar {
+    display: flex;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     width: 100vw;
     height: 60px;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: center; */
     font-size: 1.1rem;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 5px 5px 5px rgba(85, 85, 85, 0.6);
-    overflow: hidden;
     text-align: center;
     padding: 5px 0;
     z-index: 9;
 }
-.navbar nav {
-    float: right;
-    padding-right: 4rem;
+
+.nav-link-list {
+    display: inline-block;
+    padding-right: 3rem;
+    align-content: center;
 }
-.navbar nav ul {
+
+.nav-link-list ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    column-gap: 1.6rem;
 }
-.navbar nav ul li a {
+
+.nav-link-list ul li a {
     color: #90ee90;
     text-decoration: none;
-    padding: 14px 15px 7px;
-    display: inline-block;
     position: center;
     transition: all 0.3s;
 }
-.navbar nav ul li a:hover {
+
+.nav-link-list ul li a:hover {
     text-decoration: none;
     border-bottom: 2px solid #90ee90; /* Border under navbar */
 }
+
 .nav-link:active {
     border-bottom: 2px solid #90ee90; /* Persistent border under active page */
 }
+
 #nav-logo-image {
     height: 50px;
     width: 50px;
 }
+
 .nav-logo {
-    float: left;
     padding-left: 4rem;
 }
+
 .nav-logo:hover {
     cursor: pointer;
 }
-.menu-sm {
-    margin: auto 0 ;
-    display: none;
+
+.hamburger-sm {
+    display: none;;
 }
 
+/* NAVIGATION BAR - SMALL SCREEN */
 @media screen and (max-width: 768px) {
     html, body {
         padding: 0;
         margin: 0;
     }
+
     .navbar {
-        overflow: hidden;
+        /* overflow: hidden; */
         font-size: 0.8rem;
-        height: 4rem;
+        height: auto;
         background-color: rgba(0, 0, 0, 0.8);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
-    .navbar nav {
-        display: none;
+
+    .nav-link-list {
+        font-weight: bold;
+        font-size: 0.9em;
+        background: #000101;
+        text-align: center;
+        margin: 0 20px 10px 20px;
+        padding: 0;
     }
+
     .nav-link-list ul {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 60vw;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1.2rem;
         height: auto;
-        background-color: rgba(0, 0, 0); /*same background color of navbar*/
-        background-position: center top;
+        background-color: rgba(0, 0, 0);
+    }
+    .nav-logo-container {
+        padding-bottom: 8px;
     }
     .nav-logo {
-        padding-left: 1.6rem;
+        padding-left: 0;
     }
-    .show-list {
-        visibility: hidden;
-    }
+
     #nav-logo-image {
         margin: 0.6rem 0 0;
-        height: 35px;
-        width: 35px;
-    }
-    .menu-sm {
-        display: block;
-        padding-right: 1.6rem;
+        height: 40px;
+        width: 40px;
     }
 }
 
-/* Hero Styles */
+/* HERO STYLES */
 .hero {
     margin: 0 auto;
     position: relative;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
+    max-height: 90vh;
     max-width: 50vw;
     color: #FFFAFA;
     text-shadow: #074407 1.2px 1.5px;
     padding-bottom: 50px;
 }
+
 .hero .hero-logo {
     margin-top: 110px;
     height: 300px;
     width: 300px;
 }
+
 .hero h1 {
     font: bold 45px "Open Sans", sans-serif;
     margin-top: 0;
     margin-bottom: 15px;
     text-shadow: 3px 3px 3px rgba(17, 16, 16, 0.8);
 }
+
 .hero h3 {
     font: normal 24px "Open Sans", sans-serif;
     margin-bottom: 40px;
     text-shadow: 2px 2px 2px rgba(17, 16, 16, 0.8);
 }
+
 .hero a.btn {
-    background-color: #1e7b1e; /* Light green color */
+    background-color: #1e7b1e;  /* Light green color */
     text-decoration: none;
     color: #FFFAFA;
     border: none;
@@ -159,16 +188,19 @@ html, body {
     font-size: 18px;
     padding: 20px 46px;
 }
+
 .hero a.btn:hover {
     background-color: #77cc77; /* Darker shade of light green */
     cursor: pointer;
 }
+
 .hero-content-area {
     opacity: 0;
     margin-top: 70px;
     animation: 1.8s slidefade 1.7s forwards;
     -webkit-animation: 1.8s slidefade 1.7s forwards;
 }
+
 .hero .intro {
     font-size: 1.2em;
     line-height: 1.6;
@@ -184,32 +216,39 @@ html, body {
     }
 }
 
-@media screen and (max-width: 800px) {
+/* HERO STYLES - SMALL SCREEN */
+@media screen and (max-width: 768px) {
     .hero {
         min-height: 600px;
+        max-width: 90vw;
+        margin-top: 90px;
     }
+
     .hero h1 {
-        font-size: 48px;
+        font-size: 1.9em;
     }
+
     .hero h3 {
-        font-size: 24px;
+        font-size: 1em;
     }
+
     .hero a.btn {
         padding: 15px 40px;
     }
+
     .hero-logo {
         display: none;
     }
 }
 
-/* About Us Styles*/
+/* ABOUT US STYLES*/
 
-/* Booking Styles*/
+/* BOOKING STYLES*/
 
-/* Contact Us Styles*/
+/* CONTACT US STYLES*/
 
 
-/* Footer Styles  */
+/* FOOTER STYLES */
 footer {
     position: fixed;
     bottom: 0;
@@ -219,42 +258,57 @@ footer {
     align-items: center;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.9);
-    color: #FFFAFA;
+    color: #90ee90;
+    /* color: #FFFAFA; */
     padding: 0 6rem;
 }
+
 footer ul {
     display: flex;
     align-items: center;
     list-style-type: none;
 }
+
 footer ul li {
-    /* margin-left: 22px; */
     padding: 0 20px;
 }
-footer ul li:not(:last-child) {
-    border-inline-end: solid 2px #FFFAFA;
-}
+
+
 footer p {
     font-size: 16px;
     align-self: center;
 }
+
 footer p #copyright-copy {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     align-self: center;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 768px) {
     footer {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 15px 0 15px 0;
     }
+
     footer p {
         text-align: center;
         margin-bottom: 20px;
+        font-size: 9px;
     }
+
+    footer p #copyright-copy {
+        font-size: 9px;
+    }
+
     footer p :nth-child(2) {
         margin: 0 10px 0;
     }
+    footer ul {
+        margin-bottom: 1.1rem;
+    }
+
     footer ul li {
         margin: 0 8px;
     }
