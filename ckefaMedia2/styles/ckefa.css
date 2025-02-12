@@ -42,7 +42,7 @@ a {
     position: sticky;
     top: 0;
     width: 100vw;
-    height: 60px;
+    min-height: 60px;
     font-size: 1.1rem;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 5px 5px 5px rgba(85, 85, 85, 0.6);
@@ -64,6 +64,8 @@ a {
     column-gap: 1.6rem;
 }
 
+
+
 .nav-link-list ul li a {
     color: #90ee90;
     text-decoration: none;
@@ -74,6 +76,8 @@ a {
 .nav-link-list ul li a:hover {
     text-decoration: none;
     border-bottom: 2px solid #90ee90; /* Border under navbar */
+    padding-bottom: 0.3rem;
+    
 }
 
 .nav-link:active {
@@ -153,7 +157,7 @@ a {
     justify-content: center;
     text-align: center;
     max-height: 90vh;
-    max-width: 50vw;
+    max-width: 72vw;
     color: #FFFAFA;
     text-shadow: #074407 1.2px 1.5px;
     padding-bottom: 50px;
@@ -179,7 +183,7 @@ a {
 }
 
 .hero a.btn {
-    background-color: #1e7b1e;  /* Light green color */
+    background: linear-gradient(to bottom, #1e7b1e 0%, #77cc77 100%);
     text-decoration: none;
     color: #FFFAFA;
     border: none;
@@ -190,7 +194,7 @@ a {
 }
 
 .hero a.btn:hover {
-    background-color: #77cc77; /* Darker shade of light green */
+    background: linear-gradient(to top, #1e7b1e 0%, #77cc77 100%);
     cursor: pointer;
 }
 
@@ -206,7 +210,7 @@ a {
     line-height: 1.6;
     margin: 15px 0;
     color: #fff;
-    width: 60vw;
+    width: 70vw;
 }
 
 @keyframes slidefade {
@@ -220,8 +224,8 @@ a {
 @media screen and (max-width: 768px) {
     .hero {
         min-height: 600px;
-        max-width: 90vw;
-        margin-top: 90px;
+        max-width: 84vw;
+        margin-top: 140px;
     }
 
     .hero h1 {
