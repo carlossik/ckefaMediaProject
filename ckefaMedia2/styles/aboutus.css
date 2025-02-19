@@ -1,0 +1,76 @@
+#aboutus body {
+    background: url('../media/astro-players.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: auto;
+}
+#aboutus .container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* More transparent background */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#aboutus h1, #aboutus h2 {
+    color: #90ee90;
+    text-align: center;
+}
+#aboutus h3 {
+    color: #90ee90;
+    font-weight: bold;
+}
+#aboutus .intro {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #fff;
+}
+#aboutus p, #aboutus ul {
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #fff;
+}
+#aboutus ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+#aboutus a {
+    color: #90ee90;
+    text-decoration: none;
+}
+#aboutus a:hover {
+    text-decoration: underline;
+}
+#aboutus .button-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background-color: #90ee90;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 300px;
+}
+#aboutus .button-link:hover {
+    background-color: #77cc77;
+}
+@media (max-width: 600px) {
+    #aboutus.container {
+        max-width: 90%;
+        padding: 15px;
+        margin: 10px auto;
+        background-color: rgba(0, 0, 0, 0.5); /* Even more transparent background */
+    }
+    #aboutus h1, #aboutus h2, #aboutus p, #aboutus ul {
+        text-align: left;
+        font-size: 1em;
+    }
+    #aboutus .button-link {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}

@@ -4,118 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - CKEFA Media</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon_icons/favicon-16x16.png">
+    <link rel="manifest" href="../media/favicon_icons/site.webmanifest">
     <link rel="stylesheet" href="../styles/ckefa.css">
-    <!-- <script type="text/javascript" src="../ckefa.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="../styles/aboutus.css"> -->
     <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background: url('../media/astro-players.jpg') no-repeat center center fixed;
-            background-size: cover;
-            /* background-attachment: scroll; */
-        }
-        .container-aboutus {
-            max-width: 850px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6); /* More transparent background */
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-        h1, h2 {
-            color: #90ee90;
-            text-align: center;
-        }
-        h3 {
-            color: #90ee90;
-            font-weight: bold;
-        }
-        .intro {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin: 15px 0;
-            color: #fff;
-        }
-        p, ul {
-            line-height: 1.6;
-            margin: 15px 0;
-            color: #fff;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        a {
-            color: #90ee90;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .button-link {
-            display: block;
-            text-align: center;
-            margin: 20px auto;
-            padding: 15px 20px;
-            background-color: #90ee90;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            max-width: 300px;
-        }
-        .button-link:hover {
-            background-color: #77cc77;
-        }
-        @media (max-width: 600px) {
-            .container {
-                max-width: 90%;
-                padding: 15px;
-                margin: 10px auto;
-                background-color: rgba(0, 0, 0, 0.5); /* Even more transparent background */
-            }
-            h1, h2, p, ul {
-                text-align: left;
-                font-size: 1em;
-            }
-            .button-link {
-                width: 100%;
-                padding: 10px;
-                font-size: 16px;
-            }
-        }
-    </style>
+
 </head>
 <body id="aboutus">
 
-<section class="navbar">
-    <a class="nav-logo" href="../index.html">
-        <img id="nav-logo-image" src="../media/ckefa-logo.png" alt="brandlogo">
-    </a>
-    <nav class="nav-link-list">
-        <ul>
-            <li><a href="../index.html" class="nav-link" data-active="home">Home</a></li>
-            <li><a href="./aboutus.html" class="nav-link active" data-active="aboutus">About Us</a></li>
-            <li><a href="./booking.html" class="nav-link" data-active="booking">Book Services</a></li>
-            <li><a href="./contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a></li>
-            <li><a href="./media.html" class="nav-link" data-active="contactus">Media</a></li>
-        </ul>
-    </nav>
-    <div class="title-sm>
-        <p>CKEFA Media</p>
-    </div>
-    <div class="menu-sm">
-        <a class="nav-hamburger" href="#">
-            <i class="fa-solid fa-bars fa-2xl" style="color: #99ee90;"></i>
-        </a>
-        <a class="close-sm" href="#">
-            <i class="fa-solid fa-xmark fa-xl" style="color: #99ee90;"></i>
-        </a>
+<section class="header">
+    <div class="navbar">
+        <div class="nav-logo-container">
+            <a class="nav-logo" href="../index.html">
+                <img id="nav-logo-image" src="../media/ckefa-logo.png" alt="brandlogo">
+            </a>
+        </div>
+    
+        <nav class="nav-link-list">
+            <ul>
+                <li><a href="../index.html" class="nav-link" data-active="home">Home</a></li>
+                <li><a href="./booking.html" class="nav-link" data-active="booking">Book Services</a></li>
+                <li><a href="./aboutus.html" class="nav-link active" data-active="aboutus">About Us</a></li>
+                <li><a href="./contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a></li>
+                <li><a href="./media.html" class="nav-link" data-active="contactus">Media</a></li>
+            </ul>
+        </nav>
+    
+        <div class="hamburger-sm">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 </section>
 
 <section class="main">
-    <div class="container-aboutus">
+    <div class="container">
         <h1>About CKEFA Media</h1>
         <p class="intro"><strong>CKEFA Media</strong> is dedicated to bringing grassroots and amateur football to the forefront with high-quality recording and live streaming services. Our mission is to ensure that every match, no matter the level, gets the professional attention it deserves, providing players, coaches, and fans with exceptional media coverage.</p>
     
@@ -128,7 +55,7 @@
         <p>Experience the thrill of live football with our streaming services. We broadcast matches live on popular social media platforms such as YouTube, Facebook, and X (formerly Twitter), making it easy for fans to watch their favorite teams in real-time. Our live streaming service is designed to be seamless and accessible, ensuring that supporters can stay connected with the action no matter where they are.</p>
     
         <h3>3. Game Analysis</h3>
-        <p>Take your team's performance to the next level with our detailed game analysis services. Our experts review match footage to provide in-depth insights and feedback. Coaches and players can benefit from our comprehensive analysis, which highlights key moments, strategies, and areas for improvement. With CKJEFA Media, you'll gain valuable perspectives that can help enhance your game.</p>
+        <p>Take your team's performance to the next level with our detailed game analysis services. Our experts review match footage to provide in-depth insights and feedback. Coaches and players can benefit from our comprehensive analysis, which highlights key moments, strategies, and areas for improvement. With CKEFA Media, you'll gain valuable perspectives that can help enhance your game.</p>
     
         <h3>4. Highlights</h3>
         <p>Capture the essence of each match with our professionally edited highlights. Our team selects the best moments from every game, creating engaging and dynamic highlight reels that celebrate the excitement and intensity of football. These highlights are perfect for sharing on social media, team websites, and with friends and family.</p>
@@ -144,7 +71,7 @@
             <li><strong>Engagement:</strong> Our services help teams engage with their supporters and create a vibrant community around the sport.</li>
         </ul>
     
-        <a href="booking.html" class="button-link">Book Our Services or Make an Enquiry</a>
+        <a href="../pages/booking.html" class="button-link">Book Our Services or Make an Enquiry</a>
     </div>
 </section>
 
@@ -157,7 +84,10 @@
         <li><a href="#"><i class="fa-brands fa-instagram fa-xl" style="color:#FFFAFA"></i></a></li>
     </ul>
 </footer>
-    <script type="text/javascript" src="../ckefa.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../ckefa.js" defer></script>
     <script data-cfasync="false" type="text/javascript" src="../form-submission-handler.js"></script>
 </body>
 </html>

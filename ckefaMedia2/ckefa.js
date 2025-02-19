@@ -1,25 +1,12 @@
-$(document).ready(function () {
-  $(".close-sm").hide();
-  $(".hamburger-sm").click(function () {
-    $(".nav-link-list").slideToggle("slow", function () {
-      $(".hamburger-sm").hide();
-      $(".close-sm").show();
-    });
-  });
+const navList = document.querySelector(".nav-link-list")
+const hamburger = document.querySelector(".hamburger-sm")
 
-  $(".close-sm").click(function () {
-    $(".nav-link-list").slideToggle("slow", function () {
-      $(".close-sm").hide();
-      $(".hamburger-sm").show();
-    });
-  });
+hamburger.addEventListener("click", () => {
+  navList.classList.toggle("nav-link-list--open")
+  hamburger.classList.toggle("hamburger-sm--open")
+})
 
-});
-
-// $('.menu-sm').click(function () {
-//   $(this).toggleClass('active');
-//   console.log("Clicked menu");
-//   $(".nav-link-list").toggleClass("show-list");
-//   $(".nav-link-list").fadeIn();
-// });
-
+navList.addEventListener("click", () => {
+  navList.classList.remove("nav-link-list--open")
+  hamburger.classList.remove("hamburger-sm--open")
+})

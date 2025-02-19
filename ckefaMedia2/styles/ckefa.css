@@ -17,14 +17,13 @@ body {
     padding-top: 60px;
 }
 
-html, body {
-    height: auto;
+#home {
+    background: url('../media/astro-football-field-desktop.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
-.main {
-    height: 100%;
-    width: 100vw;
-    padding-bottom: 80px;
+html, body {
+    height: auto;
 }
 
 ul {
@@ -37,11 +36,9 @@ a {
 }
 
 /* NAVIGATION BAR */
-.header {
-    background-color: rgba(19, 22, 26, 0.8);
-    box-shadow: 5px 5px 5px rgba(85, 85, 85, 0.6);
-}
 .navbar {
+    background-color: rgba(19, 22, 26, 0.8);
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.6);
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -51,6 +48,7 @@ a {
     font-size: 1.1rem;
     text-align: center;
     padding: 5px 30px;
+    z-index: 10;
 }
 
 #nav-logo-image {
@@ -59,7 +57,7 @@ a {
 }
 
 .nav-logo {
-    padding-left: 4rem;
+    padding-left: 1.5rem;
 }
 
 .nav-logo:hover {
@@ -76,7 +74,7 @@ a {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 3.5rem;
+    gap: 2.4rem;
 }
 
 .nav-link-list ul li a {
@@ -86,51 +84,62 @@ a {
     transition: all 0.3s;
 }
 
-.nav-link-list ul li a:hover,
-.nav-link-list ul li a:focus {
+.nav-link:hover {
     text-decoration: none;
     border-bottom: 2px solid rgba(144, 238, 144); /* Border under navbar */
     padding-bottom: 0.3rem;
 }
 
+.active {
+    border-bottom: 2px solid rgba(144, 238, 144); /* Border under active page */
+    padding-bottom: 0.3rem;
+}
+
 .hamburger-sm {
-    display: none;;
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    margin: 5px 0;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
 }
 
 /* NAVIGATION BAR - SMALL SCREEN */
 @media screen and (max-width: 768px) {
-    .header {
-        background-color: rgba(19, 22, 26, 0.8);
-        box-shadow: 5px 5px 5px rgba(85, 85, 85, 0.6);
-    }
     .navbar {
+        position: fixed;
         font-size: 0.8rem;
-        height: auto;
+        height: 60px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        padding: 5px 0;
     }
 
     .nav-link-list {
         font-weight: bold;
         font-size: 0.9em;
-        /* background: #000101; */
         text-align: center;
-        margin: 0 20px 10px 20px;
-        padding: 0;
-    }
+        margin: 0 0 10px 0;
+        padding: 60px 0 0 0;
+        align-self: center;
+        transform: translateY(-160px);
+}
 
     .nav-link-list ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: inherit;
         gap: 1.2rem;
-        height: auto;
-        background-color: rgba(0, 0, 0);
     }
     .nav-logo-container {
-        padding-bottom: 8px;
+        padding: 0 0 8px 25px;
     }
     .nav-logo {
         padding-left: 0;
@@ -141,16 +150,40 @@ a {
         height: 40px;
         width: 40px;
     }
+    .hamburger-sm {
+        display: block;
+        padding: 0 25px 8px 0;
+        margin: 0.9rem 0 0;
+    }
+
+    .nav-link-list--open {
+        background: inherit;
+        padding-bottom: 30px;
+        width: 90%;
+        transform: translateY(100px);
+        transition: all 0.5s ease-in-out;
+}
+    .hamburger-sm--open .bar:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger-sm--open .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-sm--open .bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+
+    }
 }
 
-/* HOMEPAGE STYLES */
+/* HOMEPAGE HERO STYLES */
 .hero {
     margin: 0 auto;
     position: relative;
     justify-content: center;
     text-align: center;
     max-height: 90vh;
-    max-width: 72vw;
+    width: 80vw;
+    max-width: 1200px;
     color: #FFFAFA;
     text-shadow: #074407 1.2px 1.5px;
     padding-bottom: 50px;
@@ -218,7 +251,7 @@ a {
     .hero {
         min-height: 600px;
         max-width: 84vw;
-        margin-top: 140px;
+        margin-top: 120px;
     }
 
     .hero h1 {
@@ -239,11 +272,86 @@ a {
 }
 
 /* ABOUT US STYLES*/
+#aboutus {
+    background: url('../media/astro-players.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+#aboutus .main .container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* More transparent background */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#aboutus .main h1, #aboutus .main h2 {
+    color: #90ee90;
+    text-align: center;
+}
+#aboutus .main h3 {
+    color: #90ee90;
+    font-weight: bold;
+}
+#aboutus .main .intro {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #fff;
+}
+#aboutus .main p, #aboutus .main ul {
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #fff;
+}
+#aboutus .main ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+#aboutus .main a {
+    color: #90ee90;
+    text-decoration: none;
+}
+#aboutus .main a:hover {
+    text-decoration: underline;
+}
+#aboutus .button-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background: linear-gradient(to bottom, #1e7b1e 0%, #77cc77 100%);
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 300px;
+}
+#aboutus .button-link:hover {
+    background: linear-gradient(to top, #1e7b1e 0%, #77cc77 100%);
+}
+@media (max-width: 600px) {
+    #aboutus .main .container {
+        max-width: 90%;
+        padding: 15px;
+        margin: 10px auto;
+        background-color: rgba(0, 0, 0, 0.5); /* Even more transparent background */
+    }
+    #aboutus .main h1, #aboutus .main h2, #aboutus .main p, #aboutus .main ul {
+        text-align: left;
+        font-size: 1em;
+    }
+    #aboutus .main .button-link {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
 
 /* BOOKING STYLES*/
 
 /* CONTACT US STYLES*/
-
 
 /* FOOTER STYLES */
 footer {
@@ -256,7 +364,6 @@ footer {
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.9);
     color: #90ee90;
-    /* color: #FFFAFA; */
     padding: 0 6rem;
 }
 
@@ -269,7 +376,6 @@ footer ul {
 footer ul li {
     padding: 0 20px;
 }
-
 
 footer p {
     font-size: 16px;
@@ -286,12 +392,12 @@ footer p #copyright-copy {
     footer {
         flex-direction: column-reverse;
         height: auto;
-        padding: 15px 0 15px 0;
+        padding: 15px 0 10px 0;
     }
 
     footer p {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         font-size: 9px;
     }
 
