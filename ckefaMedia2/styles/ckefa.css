@@ -9,6 +9,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: "Orbitron", serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -17,13 +20,17 @@ body {
     padding-top: 60px;
 }
 
+#home .hero,
+#aboutus .main,
+#booking .main,
+#contactus .main,
+#mediahub .main {
+    flex-grow: 1;
+}
+
 #home {
     background: url('../media/astro-football-field-desktop.jpg') no-repeat center center fixed;
     background-size: cover;
-}
-
-html, body {
-    height: auto;
 }
 
 ul {
@@ -37,7 +44,7 @@ a {
 
 /* NAVIGATION BAR */
 .navbar {
-    background-color: rgba(19, 22, 26, 0.8);
+    background-color: rgba(19, 22, 26, 1);
     box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.6);
     display: flex;
     justify-content: space-between;
@@ -275,7 +282,10 @@ a {
 #aboutus {
     background: url('../media/astro-players.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
+}
+
+#aboutus .main {
+    padding: 50px 0;
 }
 #aboutus .main .container {
     max-width: 850px;
@@ -309,7 +319,6 @@ a {
     padding-left: 20px;
 }
 #aboutus .main a {
-    color: #90ee90;
     text-decoration: none;
 }
 #aboutus .main a:hover {
@@ -321,7 +330,7 @@ a {
     margin: 20px auto;
     padding: 15px 20px;
     background: linear-gradient(to bottom, #1e7b1e 0%, #77cc77 100%);
-    color: #000;
+    color: #FFFAFA;
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
@@ -330,8 +339,9 @@ a {
 }
 #aboutus .button-link:hover {
     background: linear-gradient(to top, #1e7b1e 0%, #77cc77 100%);
+    text-decoration: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #aboutus .main .container {
         max-width: 90%;
         padding: 15px;
@@ -350,13 +360,203 @@ a {
 }
 
 /* BOOKING STYLES*/
+#booking {
+    background: url('../media/astro-goalpost.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#booking .main {
+    padding: 50px 0;
+}
+
+#booking .container-booking {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Lighter background */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#booking h2 {
+    color: #90ee90; /* Light green color */
+    text-align: center;
+}
+
+#booking p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+#booking label {
+    display: block;
+    margin-bottom: 5px;
+    color: #90ee90; /* Light green color */
+    font-weight: bold;
+}
+
+#booking input,
+#booking textarea,
+#booking select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000;
+}
+#booking input[type="submit"] {
+    background: linear-gradient(to bottom, #1e7b1e 0%, #77cc77 100%);
+    color: #FFFAFA;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#booking input[type="submit"]:hover {
+    background: linear-gradient(to top, #1e7b1e 0%, #77cc77 100%)
+}
+@media (max-width: 768px) {
+    #booking .container {
+        padding: 15px;
+        margin: 20px;
+    }
+    #booking h2,
+    #booking p {
+        text-align: left;
+    }
+}
 
 /* CONTACT US STYLES*/
+#contactus {
+    background: url('../media/astro-footballs-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#contactus .main {
+    padding: 50px 0;
+}
+
+#contactus .container-contactus {
+    max-width: 600px;
+    min-height: 320px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#contactus h2 {
+    margin: 20px 0 0 0;
+    color: #90ee90;
+    text-align: center;
+}
+#contactus p {
+    margin-bottom: 20px;
+    line-height: 1.9;
+    text-align: center;
+}
+#contactus .contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#contactus .contact-info p {
+    margin: 5px 0;
+}
+#contactus .contact-info a {
+    color: #90ee90;
+    text-decoration: none;
+}
+#contactus .contact-info a:hover {
+    text-decoration: underline;
+}
+#contactus .social-media {
+    text-align: center;
+}
+#contactus .social-media ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+#contactus .social-media ul li a {
+    display: flex;
+    flex-direction: column;
+    color: #90ee90;
+    margin: 0 10px;
+    padding-right: 5px;
+}
+#contactus .social-media ul li a label {
+    padding-top: 15px;
+}
+#contactus .social-media ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #contactus .container-contactus {
+        margin: 0 20px;
+    }
+    #contactus .social-media ul {
+        font-size: 10px;
+    }
+}
+
+/* MEDIA HUB STYLES */
+#mediahub {
+    background: url('../media/astro-corner-flag.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#mediahub .main {
+    padding: 50px 0;
+}
+
+#mediahub .container-mediahub {
+    max-width: 600px;
+    min-height: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#mediahub h2 {
+    color: #90ee90;
+    text-align: center;
+}
+#mediahub p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+#mediahub .mediahub-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#mediahub .mediahub-item p {
+    margin: 5px 0;
+    font-size: 2rem;
+    font-weight: 800;
+}
+#mediahub .mediahub-item a {
+    color: #90ee90;
+    text-decoration: none;
+}
+#mediahub .mediahub-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #mediahub .container-mediahub {
+        margin: 0 20px;
+    }
+}
 
 /* FOOTER STYLES */
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100vw;
     height: 90px;
     display: flex;

@@ -4,96 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking and Enquiry Form - CKEFA Media</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon_icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/favicon_icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon_icons/favicon-16x16.png">
+    <link rel="manifest" href="../media/favicon_icons/site.webmanifest">
     <link rel="stylesheet" href="../styles/ckefa.css">
-    <!-- <script type="text/javascript" src="../ckefa.js"></script> -->
     <script src="https://kit.fontawesome.com/881c006f76.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background: url('../media/astro-goalpost.jpg') no-repeat center center fixed;
-            background-size: cover;
-            /* background-attachment: scroll; */
-        }
-
-        .container-booking {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Lighter background */
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-        h2 {
-            color: #90ee90; /* Light green color */
-            text-align: center;
-        }
-        p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #90ee90; /* Light green color */
-            font-weight: bold;
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            color: #000;
-        }
-        input[type="submit"] {
-            background-color: #90ee90; /* Light green color */
-            color: #000;
-            border: none;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #77cc77; /* Darker shade of light green */
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-                margin: 20px;
-            }
-            h2, p {
-                text-align: left;
-            }
-        }
-    </style>
 </head>
 <body id="booking">
 
-<section class="navbar">
-    <a class="nav-logo" href="../index.html">
-        <img id="nav-logo-image" src="../media/ckefa-logo.png" alt="brandlogo">
-    </a>
-    <nav class="nav-link-list">
-        <ul>
-            <li><a href="../index.html" class="nav-link" data-active="home">Home</a></li>
-            <li><a href="./aboutus.html" class="nav-link" data-active="aboutus">About Us</a></li>
-            <li><a href="./booking.html" class="nav-link active" data-active="booking">Book Services</a></li>
-            <li><a href="./contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a></li>
-            <li><a href="./media.html" class="nav-link" data-active="contactus">Media</a></li>
-        </ul>
-    </nav>
-    <div class="title-sm>
-        <p>CKEFA Media</p>
-    </div>
-    <div class="menu-sm">
-        <a class="nav-hamburger" href="#">
-            <i class="fa-solid fa-bars fa-2xl" style="color: #99ee90;"></i>
-        </a>
-        <a class="close-sm" href="#">
-            <i class="fa-solid fa-xmark fa-xl" style="color: #99ee90;"></i>
-        </a>
+<section class="header">
+    <div class="navbar">
+        <div class="nav-logo-container">
+            <a class="nav-logo" href="../index.html">
+                <img id="nav-logo-image" src="../media/ckefa-logo.png" alt="brandlogo">
+            </a>
+        </div>
+    
+        <nav class="nav-link-list">
+            <ul>
+                <li><a href="../index.html" class="nav-link" data-active="home">Home</a></li>
+                <li><a href="./booking.html" class="nav-link active" data-active="booking">Book Services</a></li>
+                <li><a href="./aboutus.html" class="nav-link" data-active="aboutus">About Us</a></li>
+                <li><a href="./contactusPage.html" class="nav-link" data-active="contactus">Contact Us</a></li>
+                <li><a href="./media.html" class="nav-link" data-active="contactus">Media Hub</a></li>
+            </ul>
+        </nav>
+    
+        <div class="hamburger-sm">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </div>
 </section>
 
@@ -152,7 +94,7 @@
 </section>
 
 <footer>
-    <p>Copyright: <span id="copyright-copy">&copy; 2024 CKEFA Media, </span> All rights reserved.</p>
+    <p>Copyright: <span id="copyright-copy">&copy; 2025 CKEFA Media, </span> All rights reserved.</p>
     <ul>
         <li><a href="#"><i class="fa-brands fa-youtube fa-xl" style="color:#FFFAFA"></i></a></li>
         <li><a href="#"><i class="fa-brands fa-x-twitter fa-xl" style="color:#FFFAFA"></i></a></li>
@@ -160,6 +102,8 @@
         <li><a href="#"><i class="fa-brands fa-instagram fa-xl" style="color:#FFFAFA"></i></a></li>
     </ul>
 </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../ckefa.js" crossorigin="anonymous"></script>
     <script data-cfasync="false" type="text/javascript" src="../form-submission-handler.js"></script>
 </body>
