@@ -417,6 +417,11 @@ a {
 #booking input[type="submit"]:hover {
     background: linear-gradient(to top, #1e7b1e 0%, #77cc77 100%)
 }
+
+.thankyou_message {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #booking .container {
         padding: 15px;
