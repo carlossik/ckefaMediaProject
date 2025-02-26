@@ -203,14 +203,14 @@ a {
 }
 
 .hero h1 {
-    font: bold 45px "Open Sans", sans-serif;
+    /* font: bold 45px "Open Sans", sans-serif; */
     margin-top: 0;
     margin-bottom: 15px;
     text-shadow: 3px 3px 3px rgba(17, 16, 16, 0.8);
 }
 
 .hero h3 {
-    font: normal 24px "Open Sans", sans-serif;
+    /* font: normal 24px "Open Sans", sans-serif; */
     margin-bottom: 40px;
     text-shadow: 2px 2px 2px rgba(17, 16, 16, 0.8);
 }
