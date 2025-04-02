@@ -1,20 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const selector = '.nav-link';
-    const elems = Array.from( document.querySelectorAll( selector ) );
-    const navigation = document.querySelector( 'nav' );
+// Navigation bar - small screen hamburger functions
+const navList = document.querySelector(".nav-link-list")
+const hamburger = document.querySelector(".hamburger-sm")
 
-    function makeActive( evt ) {
-      const target = evt.target;
+hamburger.addEventListener("click", () => {
+  navList.classList.toggle("nav-link-list--open")
+  hamburger.classList.toggle("hamburger-sm--open")
+})
 
-      if ( !target || !target.matches( selector ) ) {
-        return;
-      }
+navList.addEventListener("click", () => {
+  navList.classList.remove("nav-link-list--open")
+  hamburger.classList.remove("hamburger-sm--open")
+})
 
-      elems.forEach( elem => elem.classList.remove( 'active' ) );
-
-        evt.target.classList.add( 'active' );
-    };
-
-    navigation.addEventListener( 'mousedown', makeActive );
-
-    } );
+// Booking form submission
